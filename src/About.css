@@ -1,0 +1,104 @@
+/* About.css */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+.about-container {
+    text-shadow: 0 0 200px pink, 0 0 20px black;
+    padding: 50px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    max-width: 1200px;
+    margin-top: 100px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.6);
+  }
+  
+  .about-header {
+    font-size: 240px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+  }
+  
+  .about-header h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .about-header p {
+    font-size: 18px;
+    color: black;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .about-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px gray, 0 0 30px black;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  .about-text {
+    flex: 2;
+    color: black;
+  }
+  
+  .about-text h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: black;
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: black;
+  }
+  
+  .contact-button {
+    box-shadow: 0 0 20px gray, 0 0 30px black;
+    transition: transform 0.3s ease;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: black;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    box-shadow: 0 0 20px gray, 0 0 30px black;
+    background-color: mediumvioletred;
+    color: #222;
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      margin-top: 20px;
+    }
+  }
+  

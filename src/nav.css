@@ -1,0 +1,168 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .navbar {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    border-radius: 20px;
+    box-shadow: 0 0 100px blue, 0 0 50px black;
+  }
+  
+  .navbar-brand {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 24px;
+    color: #fff;
+    color: black;
+    text-shadow: 0 0 200px pink, 0 0 20px black;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-items {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .navbar-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-item a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.6);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .navbar-item a:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .navbar-item a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  
+  .navbar-toggle {
+    background-color: transparent;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    border-radius: 20px;
+    box-shadow: 0 0 100px blue, 0 0 50px black;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .toggle-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-menu.open {
+    width:62%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 0px;
+  }
+  .navbar-menu.open a{
+      font-size: 15px;
+      margin-left: 20px;
+      margin-right: 05px;
+      color: black;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-brand{
+      font-size: 20px;
+      padding: 0px;
+    }
+    .navbar-menu {
+      margin-left: 10px;
+      display: none;
+      flex-direction:column-reverse;
+    }
+    .navbar-item{
+    
+      padding: 0px;
+    }
+    .navbar-toggle {
+      margin-left: 20px;
+      position:sticky;
+      height: 20px;
+      display: flex;
+    }
+  }
+  @media (max-width : 487px){
+    .navbar-brand{
+      font-size: 15px;
+      margin-right: 50px;
+    }
+    .navbar-items{
+      font-size:0px;
+    }
+    .navbar{
+      width: 125%;
+    }
+    .navbar-menu {
+      margin-left: 0px;
+      font-size: 0px;
+    }
+    .navbar-toggle{
+      width: 20px;
+      height: 20px;
+    }
+  }  
